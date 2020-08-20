@@ -49,7 +49,7 @@ WRITE_UNINSTALL_TARGET_SCRIPT()
 
 # Configure the file that reads the install manifest and processes the files
 configure_file(
-    "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
     IMMEDIATE @ONLY)
 
