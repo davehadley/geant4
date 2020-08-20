@@ -19,17 +19,17 @@
 include_directories(${CLHEP_INCLUDE_DIRS})
 
 # List internal includes needed.
-include_directories(${CMAKE_SOURCE_DIR}/source/digits_hits/digits/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/digits_hits/hits/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/event/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/HEPGeometry/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/intercoms/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/particles/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/run/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/track/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/tracking/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/digits_hits/digits/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/digits_hits/hits/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/event/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/HEPGeometry/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/intercoms/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/particles/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/run/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/track/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/tracking/include)
 
 #
 # Define the Geant4 Module.

@@ -20,11 +20,11 @@ include_directories(${CLHEP_INCLUDE_DIRS})
 include_directories(${EXPAT_INCLUDE_DIRS})
 
 # List internal includes needed.
-include_directories(${CMAKE_SOURCE_DIR}/source/global/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/intercoms/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/analysis/g4tools/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/analysis/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/analysis/hntools/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/intercoms/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/analysis/g4tools/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/analysis/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/analysis/hntools/include)
 
 #
 # Define the Geant4 Module.

@@ -645,7 +645,7 @@ macro(_g4tc_configure_build_tree_scripts SCRIPT_NAME)
 
     # Configure the file - goes straight into the binary dir
     configure_file(
-      ${CMAKE_SOURCE_DIR}/cmake/Templates/geant4make-skeleton.in
+      ${PROJECT_SOURCE_DIR}/cmake/Templates/geant4make-skeleton.in
       ${PROJECT_BINARY_DIR}/${SCRIPT_NAME}${GEANT4_TC_SHELL_EXTENSION}
       @ONLY
       )
@@ -666,7 +666,7 @@ macro(_g4tc_configure_install_tree_scripts CONFIGURE_DESTINATION SCRIPT_NAME INS
 
     # Configure the file
     configure_file(
-      ${CMAKE_SOURCE_DIR}/cmake/Templates/geant4make-skeleton.in
+      ${PROJECT_SOURCE_DIR}/cmake/Templates/geant4make-skeleton.in
       ${CONFIGURE_DESTINATION}/${SCRIPT_NAME}${GEANT4_TC_SHELL_EXTENSION}
       @ONLY
       )
@@ -947,7 +947,7 @@ foreach(_shell bourne;cshell)
 
   # Configure the file
   configure_file(
-    ${CMAKE_SOURCE_DIR}/cmake/Templates/geant4-env-skeleton.in
+    ${PROJECT_SOURCE_DIR}/cmake/Templates/geant4-env-skeleton.in
     ${PROJECT_BINARY_DIR}/InstallTreeFiles/${_scriptfullname}
     @ONLY
     )

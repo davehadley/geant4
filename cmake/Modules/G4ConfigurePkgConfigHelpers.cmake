@@ -325,7 +325,7 @@ if(NOT GEANT4_BUILD_GRANULAR_LIBS AND UNIX)
   # a CMake 2.7 in the wild...
   if(${CMAKE_VERSION} VERSION_GREATER 2.7)
     configure_file(
-      ${CMAKE_SOURCE_DIR}/cmake/Templates/geant4-config.in
+      ${PROJECT_SOURCE_DIR}/cmake/Templates/geant4-config.in
       ${PROJECT_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/geant4-config
       @ONLY
       )
@@ -342,7 +342,7 @@ if(NOT GEANT4_BUILD_GRANULAR_LIBS AND UNIX)
     # Changing permissions is awkward, so just configure and document
     # that you have to do 'sh geant4-config' in this case.
     configure_file(
-      ${CMAKE_SOURCE_DIR}/cmake/Templates/geant4-config.in
+      ${PROJECT_SOURCE_DIR}/cmake/Templates/geant4-config.in
       ${PROJECT_BINARY_DIR}/geant4-config
       @ONLY
       )
@@ -375,7 +375,7 @@ if(NOT GEANT4_BUILD_GRANULAR_LIBS AND UNIX)
 
   # Configure the install tree script
   configure_file(
-    ${CMAKE_SOURCE_DIR}/cmake/Templates/geant4-config.in
+    ${PROJECT_SOURCE_DIR}/cmake/Templates/geant4-config.in
     ${PROJECT_BINARY_DIR}/InstallTreeFiles/geant4-config
     @ONLY
     )

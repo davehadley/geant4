@@ -19,10 +19,10 @@
 include_directories(${CLHEP_INCLUDE_DIRS})
 
 # List internal includes needed.
-include_directories(${CMAKE_SOURCE_DIR}/source/global/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/intercoms/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/interfaces/common/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/interfaces/GAG/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/intercoms/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/interfaces/common/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/interfaces/GAG/include)
 
 #
 # Module has optional sources
@@ -84,7 +84,7 @@ if(GEANT4_USE_QT)
     # Add the moc sources - must use an absolute path to the files being
     # wrapped
     QT4_WRAP_CPP(G4INTERFACES_MOC_SOURCES 
-        ${CMAKE_SOURCE_DIR}/source/interfaces/basic/include/G4UIQt.hh 
+        ${PROJECT_SOURCE_DIR}/source/interfaces/basic/include/G4UIQt.hh 
         OPTIONS -DG4UI_BUILD_QT_SESSION)
 
     list(APPEND G4INTERFACES_BASIC_MODULE_SOURCES ${G4INTERFACES_MOC_SOURCES})

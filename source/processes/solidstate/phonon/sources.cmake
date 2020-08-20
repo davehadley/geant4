@@ -19,16 +19,16 @@
 include_directories(${CLHEP_INCLUDE_DIRS})
 
 # List internal includes needed.
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/volumes/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/HEPGeometry/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/HEPRandom/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/materials/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/particles/bosons/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/particles/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/processes/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/track/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/volumes/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/HEPGeometry/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/HEPRandom/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/materials/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/particles/bosons/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/particles/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/processes/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/track/include)
 
 #
 # Define the Geant4 Module.

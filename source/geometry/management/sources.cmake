@@ -20,12 +20,12 @@ include_directories(${CLHEP_INCLUDE_DIRS})
 include_directories(${USOLIDS_INCLUDE_DIRS})
 
 # List internal includes needed.
-include_directories(${CMAKE_SOURCE_DIR}/source/global/HEPGeometry/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/HEPRandom/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/graphics_reps/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/intercoms/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/materials/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/HEPGeometry/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/HEPRandom/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/graphics_reps/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/intercoms/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/materials/include)
 
 #
 # Define the Geant4 Module.

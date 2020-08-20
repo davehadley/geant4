@@ -19,30 +19,30 @@
 include_directories(${CLHEP_INCLUDE_DIRS})
 
 # List internal includes needed.
-include_directories(${CMAKE_SOURCE_DIR}/source/digits_hits/hits/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/digits_hits/digits/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/event/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/navigation/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/volumes/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/solids/CSG/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/solids/specific/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/HEPGeometry/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/HEPRandom/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/graphics_reps/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/intercoms/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/interfaces/basic/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/materials/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/interfaces/common/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/particles/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/processes/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/run/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/track/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/tracking/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/visualization/externals/gl2ps/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/visualization/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/visualization/modeling/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/digits_hits/hits/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/digits_hits/digits/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/event/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/navigation/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/volumes/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/solids/CSG/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/solids/specific/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/HEPGeometry/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/HEPRandom/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/graphics_reps/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/intercoms/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/interfaces/basic/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/materials/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/interfaces/common/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/particles/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/processes/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/run/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/track/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/tracking/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/visualization/externals/gl2ps/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/visualization/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/visualization/modeling/include)
 
 #
 # Module has optional sources
@@ -250,9 +250,9 @@ if(GEANT4_USE_QT)
 
     # Add the moc sources - must use absolute path to the files
     QT4_WRAP_CPP(G4OPENGL_MOC_SOURCES
-        ${CMAKE_SOURCE_DIR}/source/visualization/OpenGL/include/G4OpenGLQtExportDialog.hh
-        ${CMAKE_SOURCE_DIR}/source/visualization/OpenGL/include/G4OpenGLQtMovieDialog.hh
-        ${CMAKE_SOURCE_DIR}/source/visualization/OpenGL/include/G4OpenGLQtViewer.hh
+        ${PROJECT_SOURCE_DIR}/source/visualization/OpenGL/include/G4OpenGLQtExportDialog.hh
+        ${PROJECT_SOURCE_DIR}/source/visualization/OpenGL/include/G4OpenGLQtMovieDialog.hh
+        ${PROJECT_SOURCE_DIR}/source/visualization/OpenGL/include/G4OpenGLQtViewer.hh
          OPTIONS -DG4VIS_BUILD_OPENGLQT_DRIVER)
 
     list(APPEND G4VIS_MODULE_OPENGL_SOURCES ${G4OPENGL_MOC_SOURCES})

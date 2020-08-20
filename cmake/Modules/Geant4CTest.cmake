@@ -47,7 +47,7 @@ endif()
 # Add Unit Tests if required
 #
 if(GEANT4_BUILD_TESTS)
-  file(GLOB_RECURSE files RELATIVE ${CMAKE_SOURCE_DIR} source/CMakeLists.txt)
+  file(GLOB_RECURSE files RELATIVE ${PROJECT_SOURCE_DIR} source/CMakeLists.txt)
   foreach( file ${files} )
     get_filename_component(path ${file} PATH)
     if(path MATCHES "/test$")

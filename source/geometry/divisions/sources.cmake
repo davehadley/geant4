@@ -19,12 +19,12 @@
 include_directories(${CLHEP_INCLUDE_DIRS})
 
 # List internal includes needed.
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/solids/CSG/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/geometry/solids/specific/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/HEPGeometry/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/global/management/include)
-include_directories(${CMAKE_SOURCE_DIR}/source/graphics_reps/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/solids/CSG/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/geometry/solids/specific/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/HEPGeometry/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/global/management/include)
+include_directories(${PROJECT_SOURCE_DIR}/source/graphics_reps/include)
 
 #
 # Define the Geant4 Module.

@@ -182,7 +182,7 @@ function(geant4_add_test test)
   endif()
 
   #- Locate the test driver
-  set(_driver ${CMAKE_SOURCE_DIR}/cmake/Modules/Geant4TestDriver.cmake)
+  set(_driver ${PROJECT_SOURCE_DIR}/cmake/Modules/Geant4TestDriver.cmake)
   if(NOT EXISTS ${_driver})
     message(FATAL_ERROR "GEANT4_ADD_TEST: Geant4TestDriver.cmake not found!")
   endif()
