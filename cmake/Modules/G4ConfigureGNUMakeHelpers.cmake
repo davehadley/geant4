@@ -786,7 +786,7 @@ set(TOOLS_FONT_PATH "\"`cd \$geant4make_root/../fonts > /dev/null ; pwd`\"")
 
 # - Configure the shell scripts for the INSTALL TREE
 _g4tc_configure_install_tree_scripts(
-    ${CMAKE_BINARY_DIR}/InstallTreeFiles
+    ${PROJECT_BINARY_DIR}/InstallTreeFiles
     geant4make
     ${CMAKE_INSTALL_DATAROOTDIR}/Geant4-${Geant4_VERSION}/geant4make
     )

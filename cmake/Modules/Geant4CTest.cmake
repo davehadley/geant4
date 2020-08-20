@@ -22,7 +22,7 @@ if(GEANT4_ENABLE_TESTING)
 
   # - Geant4_DIR is needed to locate GeantConfig.cmake file required
   # by tests and examples
-  set(Geant4_DIR ${CMAKE_BINARY_DIR} CACHE PATH "Current build directory")
+  set(Geant4_DIR ${PROJECT_BINARY_DIR} CACHE PATH "Current build directory")
 
   # - Add datasets to testing environment
   geant4_get_datasetnames(_dslist)

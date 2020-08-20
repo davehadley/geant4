@@ -212,7 +212,7 @@ function(geant4_add_test test)
       --build-config $<CONFIGURATION>
       --build-noclean
       --test-command ${_command} )
-    set_property(TEST ${test} PROPERTY ENVIRONMENT Geant4_DIR=${CMAKE_BINARY_DIR})
+    set_property(TEST ${test} PROPERTY ENVIRONMENT Geant4_DIR=${PROJECT_BINARY_DIR})
     if(ARG_FAILREGEX)
       set_property(TEST ${test} PROPERTY FAIL_REGULAR_EXPRESSION "warning:|(${ARG_FAILREGEX})")
     else()

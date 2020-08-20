@@ -13,7 +13,7 @@ include(InstallRequiredSystemLibraries)
 #
 set(CPACK_PACKAGE_DESCRIPTION         "Geant4 Toolkit")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Geant4 Toolkit")
-set(CPACK_PACKAGE_DESCRIPTION_FILE    "${CMAKE_BINARY_DIR}/README.txt")
+set(CPACK_PACKAGE_DESCRIPTION_FILE    "${PROJECT_BINARY_DIR}/README.txt")
 
 set(CPACK_PACKAGE_VENDOR "Geant4 Collaboration")
 
@@ -42,11 +42,11 @@ geant4_pad_version(${${PROJECT_NAME}_VERSION_PATCH} ${PROJECT_NAME}_SOURCE_VERSI
 set(${PROJECT_NAME}_SOURCE_VERSION "${${PROJECT_NAME}_SOURCE_VERSION_MAJOR}.${${PROJECT_NAME}_SOURCE_VERSION_MINOR}.${${PROJECT_NAME}_SOURCE_VERSION_PATCH}")
 
 # - Resource files
-set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_BINARY_DIR}/LICENSE.txt")
-set(CPACK_RESOURCE_FILE_README  "${CMAKE_BINARY_DIR}/README.txt")
+set(CPACK_RESOURCE_FILE_LICENSE "${PROJECT_BINARY_DIR}/LICENSE.txt")
+set(CPACK_RESOURCE_FILE_README  "${PROJECT_BINARY_DIR}/README.txt")
 
 configure_file(LICENSE LICENSE.txt COPYONLY) # Suffix must be .txt
-file(WRITE ${CMAKE_BINARY_DIR}/README.txt "
+file(WRITE ${PROJECT_BINARY_DIR}/README.txt "
 Geant4
 ======
 A toolkit for the simulation of the passage of particles through matter.
@@ -121,7 +121,7 @@ configure_file(
   CMakeCPackOptions.cmake
   @ONLY
   )
-set(CPACK_PROJECT_CONFIG_FILE ${CMAKE_BINARY_DIR}/CMakeCPackOptions.cmake)
+set(CPACK_PROJECT_CONFIG_FILE ${PROJECT_BINARY_DIR}/CMakeCPackOptions.cmake)
 
 # FINAL step - include base CPack
 include(CPack)

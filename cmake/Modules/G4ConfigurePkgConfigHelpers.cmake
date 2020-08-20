@@ -60,7 +60,7 @@ function(get_system_include_dirs _dirs)
   # Only for GCC, Clang and Intel
   if("${CMAKE_CXX_COMPILER_ID}" MATCHES GNU OR "${CMAKE_CXX_COMPILER_ID}" MATCHES Clang OR "${CMAKE_CXX_COMPILER_ID}" MATCHES Intel)
     # Proceed
-    file(WRITE "${CMAKE_BINARY_DIR}/CMakeFiles/g4dummy" "\n")
+    file(WRITE "${PROJECT_BINARY_DIR}/CMakeFiles/g4dummy" "\n")
 
     # Save locale, them to "C" english locale so we can parse in English
     set(_orig_lc_all      $ENV{LC_ALL})
@@ -72,12 +72,12 @@ function(get_system_include_dirs _dirs)
     set(ENV{LANG}        C)
 
     execute_process(COMMAND ${CMAKE_CXX_COMPILER} ${CMAKE_CXX_COMPILER_ARG1} -v -E -x c++ -dD g4dummy
-      WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/CMakeFiles
+      WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/CMakeFiles
       ERROR_VARIABLE _cxxOutput
       OUTPUT_VARIABLE _cxxStdout
       )
 
-    file(REMOVE "${CMAKE_BINARY_DIR}/CMakeFiles/g4dummy")
+    file(REMOVE "${PROJECT_BINARY_DIR}/CMakeFiles/g4dummy")
 
     # Parse and extract search dirs
     set(_resultIncludeDirs )
